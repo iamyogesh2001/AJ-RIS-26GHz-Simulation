@@ -67,21 +67,6 @@ This paper answers the question: **how much performance is lost when you print a
 
 ---
 
-## Repository Structure
-
-```
-├── simulation.py                # Main simulation script
-├── fig1_reflection.png          # Reflection magnitude and phase
-├── fig2a_loss_bar.png           # Conductor loss bar chart
-├── fig2b_loss_scatter.png       # Loss vs conductivity scatter
-├── fig3_skindepth.png           # Skin depth analysis
-├── ris_architecture_drawio.png  # System architecture diagram
-├── LICENSE                      # MIT License
-└── README.md                    # This file
-```
-
----
-
 ## How to Reproduce
 
 ### Requirements
@@ -99,8 +84,6 @@ git clone https://github.com/iamyogesh2001/AJ-RIS-26GHz-Simulation.git
 cd AJ-RIS-26GHz-Simulation
 python simulation.py
 ```
-
-All figures will be saved in the current directory.
 
 ---
 
