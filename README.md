@@ -31,6 +31,12 @@ This paper answers the question: **how much performance is lost when you print a
 
 ---
 
+## System Architecture
+
+![RIS Unit Cell Architecture](ris_architecture_drawio.png)
+
+---
+
 ## Key Results
 
 | Material | σ (S/m) | Skin Depth at 26 GHz | Reflection Loss | vs Copper |
@@ -48,30 +54,30 @@ This paper answers the question: **how much performance is lost when you print a
 ## Simulation Results
 
 ### Figure 1: Reflection Magnitude and Phase
-![Reflection Magnitude and Phase](results/fig1_reflection.png)
+![Reflection Magnitude and Phase](fig1_reflection.png)
 
 ### Figure 2a: Conductor Loss Comparison
-![Loss Bar Chart](results/fig2a_loss_bar.png)
+![Loss Bar Chart](fig2a_loss_bar.png)
 
 ### Figure 2b: Loss vs Conductivity
-![Loss vs Conductivity](results/fig2b_loss_scatter.png)
+![Loss vs Conductivity](fig2b_loss_scatter.png)
 
 ### Figure 3: Skin Depth Analysis
-![Skin Depth](results/fig3_skindepth.png)
+![Skin Depth](fig3_skindepth.png)
 
 ---
 
 ## Repository Structure
 
 ```
-├── simulation.py          # Main simulation script
-├── results/               # Generated figures
-│   ├── fig1_reflection.png
-│   ├── fig2a_loss_bar.png
-│   ├── fig2b_loss_scatter.png
-│   └── fig3_skindepth.png
-├── LICENSE                # MIT License
-└── README.md              # This file
+├── simulation.py                # Main simulation script
+├── fig1_reflection.png          # Reflection magnitude and phase
+├── fig2a_loss_bar.png           # Conductor loss bar chart
+├── fig2b_loss_scatter.png       # Loss vs conductivity scatter
+├── fig3_skindepth.png           # Skin depth analysis
+├── ris_architecture_drawio.png  # System architecture diagram
+├── LICENSE                      # MIT License
+└── README.md                    # This file
 ```
 
 ---
@@ -89,18 +95,12 @@ Python 3.8 or higher required.
 ### Run
 
 ```bash
-# Clone the repository
-git clone https://github.com/YOUR_USERNAME/AJ-RIS-26GHz-Simulation.git
+git clone https://github.com/iamyogesh2001/AJ-RIS-26GHz-Simulation.git
 cd AJ-RIS-26GHz-Simulation
-
-# Create results directory
-mkdir -p results
-
-# Run simulation
 python simulation.py
 ```
 
-All four figures will be saved in the `results/` directory. The terminal will also print a results table with reflection loss and phase values at 26 GHz for all five conductor scenarios.
+All figures will be saved in the current directory.
 
 ---
 
@@ -108,35 +108,19 @@ All four figures will be saved in the `results/` directory. The terminal will al
 
 The simulation uses an analytical surface-impedance model:
 
-1. **Skin depth** for each conductor: δs = √(2/ωμ₀σ)
-2. **Finite-thickness correction** (Whelan model): Ct = 1/tanh(t/δs) — critical when print thickness t < δs
+1. **Skin depth**: δs = √(2/ωμ₀σ)
+2. **Finite-thickness correction**: Ct = 1/tanh(t/δs)
 3. **Surface resistance**: Rs = Ct/(σ·δs)
-4. **Grounded slab input impedance**: Zin = jηd·tan(kz·h)
+4. **Grounded slab impedance**: Zin = jηd·tan(kz·h)
 5. **Reflection coefficient** with dielectric and conductor attenuation
 
-Conductivity values are taken directly from published experimental measurements:
-- **AFRL Deneault et al.** (2020) — aerosol-jet silver ink CPW measurements 10 MHz–40 GHz
-- **Yang et al.** (2025) — screen-printed AgNW RIS at 23.5–29.5 GHz
-
-Substrate properties (εr = 2.80, tan δ = 0.0031) are from published characterization of Radix photopolymer at mmWave frequencies.
-
----
-
-## Data Sources
-
-All conductivity values used in this simulation are from published, peer-reviewed experimental measurements:
-
-| Source | Data Used |
-|---|---|
-| Deneault et al., *Data in Brief*, 2020, DOI: 10.1016/j.dib.2020.106331 | AJ silver ink conductivity vs sintering temperature |
-| Yang et al., arXiv:2509.05981, 2025 | Screen-printed AgNW conductivity |
-| Fortify Radix datasheet | Substrate permittivity and loss tangent |
+Conductivity values from published experimental measurements:
+- **AFRL Deneault et al.** (2020) — DOI: 10.1016/j.dib.2020.106331
+- **Yang et al.** (2025) — arXiv:2509.05981
 
 ---
 
 ## Citation
-
-If you use this code or results in your work, please cite:
 
 ```bibtex
 @inproceedings{rethinapandian2026ajris,
@@ -149,12 +133,6 @@ If you use this code or results in your work, please cite:
   address   = {Leuven, Belgium}
 }
 ```
-
----
-
-## License
-
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
