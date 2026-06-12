@@ -4,17 +4,34 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
 
+## Publication Status
+
+| Stage | Status |
+|---|---|
+| Submission | ✅ Submitted |
+| Peer Review | ✅ Reviewed |
+| Decision | ✅ Accepted |
+| Camera-Ready | 🔄 In Progress |
+| IEEE Xplore | 🔄 Pending Publication |
+
+**Conference:** 2nd IEEE International Conference on Additively Manufactured Electronic Systems (IEEE AMES 2026)  
+**Date:** September 14–15, 2026 — Leuven, Belgium  
+**IEEE Xplore DOI:** TBD
+
+---
+
 ## About This Repository
 
 This repository contains the simulation code and results for the paper:
 
 > **Aerosol-Jet Printed Silver Nanoparticle Reconfigurable Intelligent Surfaces for 5G mmWave: Unit Cell Simulation at 26 GHz**
 >
-> Yogesh Rethinapandian¹, Arunkarthik Sundararajan², Smrithi Prakash³
+> Yogesh Rethinapandian¹, Arunkarthik Sundararajan², Kaushik Kumar³, Smrithi Prakash⁴
 >
 > ¹ Department of Electrical and Computer Engineering, University of Illinois Chicago, USA  
 > ² IEEE Member, USA  
-> ³ SRM Institute of Science and Technology, Chennai, India
+> ³ Department of Data Science, University of Arizona, USA  
+> ⁴ Department of Computer Science, SRM Institute of Science and Technology, Chennai, India
 >
 > *2nd IEEE International Conference on Additively Manufactured Electronic Systems (IEEE AMES 2026)*  
 > *Leuven, Belgium, September 14–15, 2026*
@@ -109,7 +126,7 @@ Conductivity values from published experimental measurements:
 @inproceedings{rethinapandian2026ajris,
   title     = {Aerosol-Jet Printed Silver Nanoparticle Reconfigurable Intelligent 
                Surfaces for 5G mmWave: Unit Cell Simulation at 26 GHz},
-  author    = {Rethinapandian, Yogesh and Sundararajan, Arunkarthik and Prakash, Smrithi},
+  author    = {Rethinapandian, Yogesh and Sundararajan, Arunkarthik and Kumar, Kaushik and Prakash, Smrithi},
   booktitle = {Proc. 2nd IEEE International Conference on Additively Manufactured 
                Electronic Systems (AMES 2026)},
   year      = {2026},
@@ -122,5 +139,5 @@ Conductivity values from published experimental measurements:
 ## Contact
 
 Yogesh Rethinapandian — yrethi2@uic.edu  
-ORCID: [0009-0000-9865-0842](https://orcid.org/0009-0000-9865-0842)  
+ORCID: [0009-0000-6111-857X](https://orcid.org/0009-0000-6111-857X)  
 University of Illinois Chicago, Department of Electrical and Computer Engineering
