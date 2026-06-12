@@ -11,7 +11,7 @@
 | Submission | ✅ Submitted |
 | Peer Review | ✅ Reviewed |
 | Decision | ✅ Accepted |
-| Camera-Ready | 🔄 In Progress |
+| Camera-Ready | ✅ Submitted |
 | IEEE Xplore | 🔄 Pending Publication |
 
 **Conference:** 2nd IEEE International Conference on Additively Manufactured Electronic Systems (IEEE AMES 2026)  
